@@ -1,0 +1,72 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bulma CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+
+    <!-- font awesome cdn -->
+    <script
+      src="https://kit.fontawesome.com/8a80b728dc.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="results1"><h1>Query 1</h1></div>
+    <div id="results2"><h1>Query 2</h1></div>
+    <div id="results3"><h1>Query 3</h1></div>
+    <div id="results4"><h1>Query 4</h1></div>
+    <div id="results5"><h1>Query 5</h1></div>
+    <div id="results6"><h1>Query 6</h1></div>
+    <div id="results7"><h1>Query 7</h1></div>
+    <div id="results8"><h1>Query 8</h1></div>
+    <div id="results9"><h1>Query 9</h1></div>
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script>
+      // TODO
+      // Copy **only** your firebaseConfig from Google Firebae and add it below
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDEBnwv3oZt6V_WQbyCII1fpbbLcdWb3Zk",
+        authDomain: "soccer-7c13f.firebaseapp.com",
+        projectId: "soccer-7c13f",
+        storageBucket: "soccer-7c13f.firebasestorage.app",
+        messagingSenderId: "472313295729",
+        appId: "1:472313295729:web:31a1b5f74a349ac2d7bcd0",
+        measurementId: "G-0WQZEN28GJ",
+      };
+
+      // Your web app's Firebase configuration
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      // define authentication variable
+      let auth = firebase.auth();
+      let db = firebase.firestore();
+
+      // define a storage reference
+      let ref = firebase.storage().ref();
+    </script>
+    <!-- make sure to add your own js file as the last line in index.html file -->
+    <script src="app.js"></script>
+  </body>
+</html>
